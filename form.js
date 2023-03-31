@@ -1,3 +1,14 @@
+/**
+ * As a User need to enter a valid First Name
+    - First name starts with Cap and has minimum 3 characters
+ * 
+ * @author : Krunal Lad
+ * @since : 27-07-2021
+ */
+
+/**
+ * Update the salary value when scrolled from left to right and vice-versa
+ */
 
 const salary = document.querySelector('#salary');
 const output = document.querySelector('.salary-output');
@@ -6,9 +17,9 @@ salary.addEventListener('input', function () {
     output.textContent = salary.value;
 });
 
-
-//  To validate the name field using the REGEX expression
- 
+/**
+ * To validate the name field using the REGEX expression
+ */
 
 const text = document.querySelector('#text');
 const textError = document.querySelector('.text-error');
@@ -19,6 +30,14 @@ text.addEventListener('input', function () {
     else textError.textContent = "Name is Incorrect";
 });
 
+const password = document.querySelector('#password');
+const passwordError = document.querySelector('.pwd-error');
+password.addEventListener('input',function(){
+    let nameRegex = RegExp("[A-Za-z0-9!@#&()–{}:;',?/*~$^+=<>]{8,}");
+    if(nameRegex.test(password.value))
+        passwordError.textContent = "";
+    else passwordError.textContent = "Password is Incorrect";
+});
 
 var myInput = document.getElementById("psw");
 var letter = document.getElementById("letter");
